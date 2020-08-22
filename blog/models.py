@@ -32,5 +32,8 @@ class Comment(models.Model):
         self.approved_comment = True
         self.save()
 
+    class Meta:
+        ordering = ['created_date']
+
     def __str__(self):
         return self.text
